@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Site</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'experience.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <body>
+        <header class="header">
+            <a href="#" class="logo"><span>Ezhav</span>arasan</a>
+            <nav class="navbar">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'education' %}">Education</a>
+                <a href="{% url 'skills' %}">skills</a>
+                <a href="{% url 'experience' %}">Experience</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'con' %}">Contact me</a>
+            </nav>
+        </header>
+        <div class="container">
+            <h1>I'm <span>Ezhavarasan<br></span>Software Developer</h1>
+            <div class="button">
+                <a href=""><button>Hire me</button></a>
+                <a href=""><button>Experience</button></a>
+            </div>
+            <img src="{%  static 'my.jpg' %}">
+            
+        </div>
+        <div class="IE">
+            <h3>Internship Experience</h3>
+            <table>
+                <tr>
+                    <th>S.no</th>
+                    <th>Job role</th>
+                    <th>Company name</th>
+                    <th>Domain</th>
+                    <th>Duration</th>
+                </tr>
+                {% for i in info %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.job_role}}</td>
+                    <td>{{i.company_name}}</td>
+                    <td>{{i.Domain}}</td>
+                    <td>{{i.Duration}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="WE">
+           <h3>Work Experience</h3>
+           <table>
+              <tr>
+                <th>S.no</th>
+                <th>Job role</th>
+                <th>Company name</th>
+                <th>Domain</th>
+                <th>Duration</th>
+              </tr>
+              {% for i in work %}
+              <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.job_role}}</td>
+                <td>{{i.company_name}}</td>
+                <td>{{i.Domain}}</td>
+                <td>{{i.Duration}}</td>
+              </tr>
+              {% endfor %}
+           </table>
+        </div>
+        <div class="bottom">
+            <footer>
+                    <p><i class="fas fa-map-marker-alt"></i> 3/141,west street,katteriapatti,kadayam,tenkasi dt,Tamilnadu,India</p>
+                    <p><i class="fas fa-envelope"></i> ezhavarasan2003b@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 7604950433</p>
+            </footer>
+        </div>
+</body>
+</html>

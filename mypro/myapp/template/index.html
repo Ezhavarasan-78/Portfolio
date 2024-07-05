@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Site</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Ezhav</span>arasan</a>
+        <nav class="navbar">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'education' %}">Education</a>
+                <a href="{% url 'skills' %}">skills</a>
+                <a href="{% url 'experience' %}">Experience</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'con' %}">Contact me</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>I'm <span>Ezhavarasan<br></span>Software Developer</h1>
+        <div class="button">
+            <a href=""><button>Hire me</button></a>
+            <a href=""><button>Experience</button></a>
+        </div>
+        <img src="{%  static 'my.jpg' %}">
+    </div>
+    <div class="about">
+        <h2>Welcome to My Portfolio!<br><br>I’m excited to share my journey  with you.</h2>
+        <br>
+        <h5>I am Ezhavarasan.B, an enthusiastic and dedicated aspiring software developer with a passion for creating innovative solutions and a keen interest in technology. I recently graduated with a Bachelor of Engineering in Computer Science from KIT-Kalaignarkarunanidhi Institute of Technology. My journey into the world of software development began during my undergraduate studies, where I developed a strong foundation in various programming languages, algorithms, and software development principles.</h5>
+    </div>
+    <div class="a" style="display: flex;background-color:#f0f8f5;height:375px">
+        <h5 style="font-size: 18px;line-height:2.0;margin-left:23px;">I am passionate about leveraging technology to solve real-world problems and am continuously seeking to enhance my skills and knowledge. As a fresh graduate, I am eager to bring my enthusiasm, technical skills, and creative problem-solving abilities to a dynamic and innovative team. Thank you for taking the time to visit my portfolio, and I look forward to connecting with you!</h5>
+        <img src="{% static 'myself.jpg' %}" style="width:300px;height:322px;border-radius:50px;border:2px solid #ccc;object-fit:cover">
+    </div>
+    <div class="bottom"style="margin:0">
+        <footer>
+                <p><i class="fas fa-map-marker-alt"></i> 3/141,west street,katteriapatti,kadayam,tenkasi dt,Tamilnadu,India</p>
+                <p><i class="fas fa-envelope"></i> ezhavarasan2003b@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 7604950433</p>
+        </footer>
+    </div>
+</body>
+</html>

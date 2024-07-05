@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Site</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'projects.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <body>
+        <header class="header">
+            <a href="#" class="logo"><span>Ezhav</span>arasan</a>
+            <nav class="navbar">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'education' %}">Education</a>
+                <a href="{% url 'skills' %}">skills</a>
+                <a href="{% url 'experience' %}">Experience</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'con' %}">Contact me</a>
+            </nav>
+        </header>
+        <div class="container">
+            <h1>I'm <span>Ezhavarasan<br></span>Software Developer</h1>
+            <div class="button">
+                <a href=""><button>Hire me</button></a>
+                <a href=""><button>Experience</button></a>
+            </div>
+            <img src="{%  static 'my.jpg' %}">
+            
+        </div>
+        <div class="AP">
+            <h3 style="margin-top: 10px;">Academic Project</h3>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Domain</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>IoT-Based Air Quality Navigation System for Vulnerable Populations</td>
+                    <td>Internet of Things</td>
+                    <td>June 2023-April 2024</td>
+                </tr>
+            </table>
+        </div>
+        <div class="IP">
+            <h3>Internship Project</h3>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Domain</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>Customer Relationship Management</td>
+                    <td>Python Fullstack Development</td>
+                    <td>January 2024-april 2024</td>
+                </tr>
+            </table>
+        </div>
+        <div class="MP">
+            <h3>My Projects</h3>
+            <table>
+                <tr>
+                    <th>S.no</th>
+                    <th>Project</th>
+                    <th>Key-skill</th>
+                    <th>Project URL</th>
+                </tr>
+                {% for i in info %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.project_name}}</td>
+                    <td>{{i.key_skills}}</td>
+                    <td><a href="{{i.project_url}}">{{i.project_url}}</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="bottom" style="margin-top: 230px;">
+            <footer>
+                    <h3></h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 3/141,west street,katteriapatti,kadayam,tenkasi dt,Tamilnadu,India</p>
+                    <p><i class="fas fa-envelope"></i> ezhavarasan2003b@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 7604950433</p>
+            </footer>
+        </div>
+</body>
+</html>
